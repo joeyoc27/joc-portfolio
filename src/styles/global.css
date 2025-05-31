@@ -154,11 +154,11 @@ hr {
 }
 
 ::selection {
-  background-color: ##f8e4b5;
+  background-color: #f8e4b5;
   color: inherit;
 }
 
 ::-moz-selection {
-  background-color: ##f8e4b5;
+  background-color: #f8e4b5;
   color: inherit;
 }
