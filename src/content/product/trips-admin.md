@@ -1,6 +1,6 @@
 ---
 title: 'Preserving Trips Admin'
-description: 'Saving Vrbo's internal support tool.'
+description: "Saving Vrbo's internal support tool."
 pubDate: 'Winter 2023'
 heroImage: '/blog-placeholder-2.jpg'
 ---
