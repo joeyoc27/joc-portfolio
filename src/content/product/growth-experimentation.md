@@ -1,7 +1,7 @@
 ---
-title: 'Product Roadmap'
-description: 'Building the future of travel supply.'
-pubDate: 'Summer 2024'
+title: 'Onboarding Sign-up: Growth Experimentation'
+description: 'A/B Tests to grow the top of the onboarding funnel.'
+pubDate: '2023 - 2025'
 heroImage: '/blog-placeholder-2.jpg'
 ---
 

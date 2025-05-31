@@ -1,7 +1,7 @@
 ---
-title: 'From Startup to Enterprise'
-description: 'Transitioning between different company scales.'
-pubDate: 'Spring 2023'
+title: 'Vrbo Host Incentive Program'
+description: 'Converting travelers to hosts with One Key Cash.'
+pubDate: 'Summer 2025'
 heroImage: '/blog-placeholder-2.jpg'
 ---
 

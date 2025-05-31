@@ -1,7 +1,7 @@
 ---
-title: 'Partner Retention Strategies'
-description: 'Building lasting relationships with travel partners.'
-pubDate: 'Winter 2024'
+title: 'Hotel Closures ML Traveler Alerts'
+description: 'Reducing traveler impact via automated closure notifications.'
+pubDate: 'Summer 2024'
 heroImage: '/blog-placeholder-2.jpg'
 ---
 
