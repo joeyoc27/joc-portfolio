@@ -14,8 +14,6 @@ type Props = CollectionEntry<'marketing'>;
 const post = Astro.props;
 const { Content } = await render(post);
 
-<Fragment>
-	<BlogPost {...post.data}>
-		<Content />
-	</BlogPost>
-</Fragment> 
+<BlogPost {...post.data}>
+	<Content />
+</BlogPost> 
