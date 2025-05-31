@@ -20,22 +20,15 @@ import { SITE_TITLE } from '../consts';
 <script>
   const header = document.querySelector('header');
   let lastScroll = 0;
-  let ticking = false;
   
   window.addEventListener('scroll', () => {
-    if (!ticking) {
-      window.requestAnimationFrame(() => {
-        const currentScroll = window.pageYOffset;
-        if (currentScroll > lastScroll && currentScroll > 0) {
-          header.classList.add('scrolled');
-        } else {
-          header.classList.remove('scrolled');
-        }
-        lastScroll = currentScroll;
-        ticking = false;
-      });
-      ticking = true;
+    const currentScroll = window.pageYOffset;
+    if (currentScroll > lastScroll && currentScroll > 0) {
+      header.classList.add('scrolled');
+    } else {
+      header.classList.remove('scrolled');
     }
+    lastScroll = currentScroll;
   });
 </script>
 
