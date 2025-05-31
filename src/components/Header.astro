@@ -20,15 +20,22 @@ import { SITE_TITLE } from '../consts';
 <script>
   const header = document.querySelector('header');
   let lastScroll = 0;
+  let ticking = false;
   
   window.addEventListener('scroll', () => {
-    const currentScroll = window.pageYOffset;
-    if (currentScroll > lastScroll && currentScroll > 0) {
-      header.classList.add('scrolled');
-    } else {
-      header.classList.remove('scrolled');
+    if (!ticking) {
+      window.requestAnimationFrame(() => {
+        const currentScroll = window.pageYOffset;
+        if (currentScroll > lastScroll && currentScroll > 0) {
+          header.classList.add('scrolled');
+        } else {
+          header.classList.remove('scrolled');
+        }
+        lastScroll = currentScroll;
+        ticking = false;
+      });
+      ticking = true;
     }
-    lastScroll = currentScroll;
   });
 </script>
 
@@ -62,7 +69,7 @@ import { SITE_TITLE } from '../consts';
 		box-sizing: border-box;
 	}
 	.site-title a {
-		font-size: 14px;
+		font-size: 16px;
 		color: #111;
 		text-decoration: none;
 		font-weight: 500;
@@ -82,7 +89,7 @@ import { SITE_TITLE } from '../consts';
 		color: #111;
 		text-decoration: none;
 		font-weight: 400;
-		font-size: 14px;
+		font-size: 16px;
 		transition: color 0.2s;
 		display: flex;
 		align-items: center;
@@ -100,9 +107,15 @@ import { SITE_TITLE } from '../consts';
 		.site-title {
 			margin-bottom: 0;
 		}
+		.site-title a {
+			font-size: 14px;
+		}
 		.nav-links {
 			flex-direction: row;
 			gap: 1.5em;
+		}
+		.nav-links a {
+			font-size: 14px;
 		}
 	}
 </style>
