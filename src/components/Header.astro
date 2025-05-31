@@ -36,7 +36,7 @@ import { SITE_TITLE } from '../consts';
 	header {
 		border-bottom: 1px solid #eee;
 		background: #fff;
-		padding: 0.75em 0;
+		padding: 1.2em 0;
 		width: 100%;
 		position: fixed;
 		top: 0;
@@ -91,24 +91,20 @@ import { SITE_TITLE } from '../consts';
 		color: #0433ff;
 	}
 	@media (max-width: 700px) {
+		header {
+			padding: 1.5em 0;
+		}
 		nav {
 			flex-direction: row;
 			align-items: center;
-			gap: 1.5em;
+			gap: 2em;
 			padding: 0 1.5em;
 		}
 		.site-title {
 			margin-bottom: 0;
 		}
-		.site-title a {
-			font-size: 14px;
-		}
-		.nav-links {
-			flex-direction: row;
-			gap: 1.5em;
-		}
-		.nav-links a {
-			font-size: 14px;
+		.site-title a, .nav-links a {
+			font-size: 17px;
 		}
 	}
 </style>
