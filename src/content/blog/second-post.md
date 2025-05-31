@@ -1,7 +1,7 @@
 ---
 title: "List Your Property Growth Experimentation"
 description: "CRO Tests to optimize Onboarding top-of-funnel "
-pubDate: "2023-Present"
+pubDate: "2023-01-01"
 heroImage: "/blog-placeholder-4.jpg"
 ---
 
