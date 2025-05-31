@@ -9,8 +9,8 @@ import { SITE_TITLE } from '../consts';
       <a href="/">Joey O'Connor</a>
     </div>
     <div class="nav-links">
-      <a href="/product">Product</a>
-      <a href="/marketing">Marketing</a>
+      <HeaderLink href="/product">Product</HeaderLink>
+      <HeaderLink href="/marketing">Marketing</HeaderLink>
     </div>
   </nav>
 </header>
@@ -77,17 +77,29 @@ import { SITE_TITLE } from '../consts';
 		align-items: center;
 		height: 100%;
 	}
-	.nav-links a {
+	.nav-links :global(a) {
 		color: #111;
 		text-decoration: none;
 		font-weight: 400;
 		font-size: 16px;
-		transition: color 0.2s;
+		transition: all 0.2s;
 		display: flex;
 		align-items: center;
+		height: 100%;
+		position: relative;
 	}
-	.nav-links a:hover, .nav-links a.active {
-		color: #0433ff;
+	.nav-links :global(a.active) {
+		color: #111;
+		font-weight: 400;
+	}
+	.nav-links :global(a.active::after) {
+		content: '';
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		height: 2px;
+		background-color: #111;
 	}
 	@media (max-width: 720px) {
 		header {
@@ -99,7 +111,7 @@ import { SITE_TITLE } from '../consts';
 		.site-title {
 			margin-bottom: 0;
 		}
-		.site-title a, .nav-links a {
+		.site-title a, .nav-links :global(a) {
 			font-size: 17px;
 		}
 	}
