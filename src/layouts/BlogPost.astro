@@ -45,7 +45,7 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 				max-width: calc(100% - 2em);
 				margin: auto;
 				padding: 2em 1em;
-				color: rgb(var(--gray-dark));
+				color: #595959;
 			}
 			.title {
 				margin-bottom: 1em;
@@ -55,10 +55,18 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 			}
 			.title h1 {
 				margin: 0 0 0.5em 0;
+				color: #111;
+				font-weight: 500;
+			}
+			h2 {
+				color: #111;
+				font-size: 1.1rem;
+				font-weight: 500;
+				margin: 2em 0 1em;
 			}
 			.date {
 				margin-bottom: 0.5em;
-				color: rgb(var(--gray));
+				color: #787878;
 			}
 			.last-updated-on {
 				font-style: italic;
