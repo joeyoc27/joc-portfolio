@@ -5,6 +5,7 @@ import { render } from 'astro:content';
 
 export async function getStaticPaths() {
 	const posts = await getCollection('product');
+	console.log('Product slugs:', posts.map(p => p.slug));
 	return posts.map((post) => ({
 		params: { slug: post.slug },
 		props: post,
@@ -13,6 +14,7 @@ export async function getStaticPaths() {
 type Props = CollectionEntry<'product'>;
 
 const post = Astro.props;
+console.log('Rendering product post:', post.slug);
 const { Content } = await render(post);
 ---
 
