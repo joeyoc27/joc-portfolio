@@ -4,15 +4,17 @@ import { SITE_TITLE } from '../consts';
 ---
 
 <header>
-	<nav>
-		<div class="site-title">
-			<a href="/">Joey O'Connor</a>
-		</div>
-		<div class="nav-links">
-			<a href="/blog">Product</a>
-			<a href="/about">Marketing</a>
-		</div>
-	</nav>
+  <div class="container">
+    <nav>
+      <div class="site-title">
+        <a href="/">Joey O'Connor</a>
+      </div>
+      <div class="nav-links">
+        <a href="/blog">Product</a>
+        <a href="/about">Marketing</a>
+      </div>
+    </nav>
+  </div>
 </header>
 <style>
 	header {
@@ -24,8 +26,6 @@ import { SITE_TITLE } from '../consts';
 		display: flex;
 		justify-content: flex-start;
 		align-items: center;
-		max-width: 900px;
-		margin: 0 auto;
 		padding: 0 1em;
 		gap: 2em;
 	}

@@ -9,8 +9,8 @@ const { date, season } = Astro.props;
 
 <time datetime={date ? date.toISOString() : undefined}>
 	{season ? season : date && date.toLocaleDateString('en-us', {
-		year: 'numeric',
-		month: 'short',
-		day: 'numeric',
+			year: 'numeric',
+			month: 'short',
+			day: 'numeric',
 	})}
 </time>

@@ -11,28 +11,40 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
 	</head>
 	<body>
-		<Header />
-		<main class="profile-main">
-			<div class="profile-img">
-				<img src="/headshot.png" alt="Joey O'Connor" />
-			</div>
-			<div class="profile-text">
-				<p>My name is Joey O'Connor and I'm currently a Product Manager at Expedia, responsible for Vrbo and Hotel Partner acquisition and retention.</p>
-				<p>I grew up in Westchester, NY and have lived in Austin, TX for the past three years.</p>
-				<p>Outside of work, I enjoy playing tennis, pickleball, and poker.</p>
-				<p>You can reach me via <a href="https://www.linkedin.com/in/joeyoc27/" target="_blank">LinkedIn</a> or <a href="mailto:joeyoc27@gmail.com">joeyoc27@gmail.com</a>.</p>
-			</div>
-		</main>
-		<Footer />
+		<div class="container">
+			<Header />
+		</div>
+		<div class="container">
+			<main class="profile-main">
+				<div class="profile-img">
+					<img src="/headshot.png" alt="Joey O'Connor" />
+				</div>
+				<div class="profile-text">
+					<p>My name is Joey O'Connor and I'm currently a Product Manager at Expedia, responsible for Vrbo and Hotel Partner acquisition and retention.</p>
+					<p>I grew up in Westchester, NY and have lived in Austin, TX for the past three years.</p>
+					<p>Outside of work, I enjoy playing tennis, pickleball, and poker.</p>
+					<p>You can reach me via <a href="https://www.linkedin.com/in/joeyoc27/" target="_blank">LinkedIn</a> or <a href="mailto:joeyoc27@gmail.com">joeyoc27@gmail.com</a>.</p>
+				</div>
+			</main>
+		</div>
+		<div class="container">
+			<Footer />
+		</div>
 		<style>
+			.container {
+				max-width: 600px;
+				margin: 0 auto;
+				padding: 0 1em;
+				text-align: left;
+				width: 100%;
+			}
 			.profile-main {
 				display: flex;
 				flex-direction: column;
-				align-items: center;
-				justify-content: center;
-				max-width: 600px;
-				margin: 3em auto 0 auto;
-				padding: 0 1em;
+				align-items: flex-start;
+				max-width: 100%;
+				margin: 3em 0 0 0;
+				padding: 0;
 				gap: 2em;
 			}
 			.profile-img img {

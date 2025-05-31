@@ -72,7 +72,7 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 							{typeof pubDate === 'string' ? (
 								<FormattedDate season={pubDate} />
 							) : (
-								<FormattedDate date={pubDate} />
+							<FormattedDate date={pubDate} />
 							)}
 							{
 								updatedDate && (
