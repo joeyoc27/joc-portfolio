@@ -20,6 +20,23 @@ const today = new Date();
 		width: 100%;
 		position: relative;
 	}
+	.footer-links {
+		max-width: 750px;
+		margin: 0 auto;
+		padding: 0;
+		box-sizing: border-box;
+		width: 100%;
+		display: flex;
+		gap: 2em;
+	}
+	.footer-links a {
+		color: #111;
+		text-decoration: none;
+		font-weight: 400;
+	}
+	.footer-links a:hover {
+		color: #0433ff;
+	}
 	@media (max-width: 700px) {
 		footer {
 			width: 100vw;
@@ -28,21 +45,8 @@ const today = new Date();
 			margin-left: -50vw;
 			margin-right: -50vw;
 		}
-	}
-	.footer-links {
-		max-width: 750px;
-		margin: 0 auto;
-		padding: 0 1.5em;
-		box-sizing: border-box;
-		width: 100%;
-	}
-	.footer-links a {
-		margin: 0 1em 0 0;
-		color: #111;
-		text-decoration: none;
-		font-weight: 400;
-	}
-	.footer-links a:hover {
-		color: #0433ff;
+		.footer-links {
+			padding: 0 1.5em;
+		}
 	}
 </style>
