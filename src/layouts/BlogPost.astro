@@ -61,6 +61,13 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 				font-weight: 500;
 				font-size: 2em;
 			}
+			.prose h1 {
+				color: #111;
+				font-size: 48px;
+				font-weight: 500;
+				margin: 2em 0 0.75em;
+				line-height: 1.1;
+			}
 			h2 {
 				color: #111;
 				font-size: 17.6px;
@@ -69,6 +76,9 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 			}
 			p, ul {
 				margin-bottom: 1.5em;
+			}
+			ul {
+				padding-left: 1.2em;
 			}
 			.date {
 				margin-bottom: 0.5em;
