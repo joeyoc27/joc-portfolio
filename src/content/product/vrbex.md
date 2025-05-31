@@ -1,6 +1,6 @@
 ---
 title: 'Replatforming Vrbo to Expedia'
-description: 'VrBex - Replatforming Vrbo to Expedia's core tech stack.'
+description: "VrBex - Replatforming Vrbo to Expedia's core tech stack."
 pubDate: 'Summer 2022'
 heroImage: '/blog-placeholder-2.jpg'
 ---
