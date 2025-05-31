@@ -21,13 +21,21 @@ const today = new Date();
 		color: #111;
 		width: 100%;
 		position: relative;
-		left: 0;
-		right: 0;
+	}
+	@media (max-width: 700px) {
+		footer {
+			width: 100vw;
+			left: 50%;
+			right: 50%;
+			margin-left: -50vw;
+			margin-right: -50vw;
+		}
 	}
 	.footer-links {
 		max-width: 750px;
 		margin: 0 auto;
-		padding: 0 1em;
+		padding: 0 1.5em;
+		box-sizing: border-box;
 	}
 	.footer-links a {
 		margin: 0 1em 0 0;

@@ -54,11 +54,12 @@ import { SITE_TITLE } from '../consts';
 		display: flex;
 		justify-content: flex-start;
 		align-items: center;
-		gap: 1em;
-		padding: 0;
+		gap: 1.5em;
+		padding: 0 1.5em;
 		height: 100%;
 		max-width: 750px;
 		margin: 0 auto;
+		box-sizing: border-box;
 	}
 	.site-title a {
 		font-size: 14px;
@@ -67,11 +68,15 @@ import { SITE_TITLE } from '../consts';
 		font-weight: 500;
 		letter-spacing: 0;
 		line-height: 1;
+		display: flex;
+		align-items: center;
 	}
 	.nav-links {
 		display: flex;
-		gap: 1em;
+		gap: 1.5em;
 		line-height: 1;
+		align-items: center;
+		height: 100%;
 	}
 	.nav-links a {
 		color: #111;
@@ -79,6 +84,8 @@ import { SITE_TITLE } from '../consts';
 		font-weight: 400;
 		font-size: 14px;
 		transition: color 0.2s;
+		display: flex;
+		align-items: center;
 	}
 	.nav-links a:hover, .nav-links a.active {
 		color: #0433ff;
@@ -88,7 +95,7 @@ import { SITE_TITLE } from '../consts';
 			flex-direction: row;
 			align-items: center;
 			gap: 1.5em;
-			padding: 0 1em;
+			padding: 0 1.5em;
 		}
 		.site-title {
 			margin-bottom: 0;
