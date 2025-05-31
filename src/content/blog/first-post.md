@@ -2,11 +2,11 @@
 title: "Address Validation"
 description: "Re-imagining Address Validation in Vrbo Host Onboarding"
 pubDate: "Summer 2023"
-heroImage: "/images/hero-1301w38th.png"
+heroImage: "/blog-placeholder-1.jpg"
 ---
 
 <p align="center">
-  <img src="/images/hero-1301w38th.png" alt="Address Validation UI Screenshot" width="400" />
+  <img src="/blog-placeholder-1.jpg" alt="Address Validation UI Screenshot" width="400" />
 </p>
 
 Background of Problem
