@@ -37,13 +37,11 @@ import { SITE_TITLE } from '../consts';
 		border-bottom: 1px solid #eee;
 		background: #fff;
 		padding: 0.75em 0;
-		width: 100vw;
+		width: 100%;
 		position: fixed;
 		top: 0;
-		left: 50%;
-		right: 50%;
-		margin-left: -50vw;
-		margin-right: -50vw;
+		left: 0;
+		right: 0;
 		transition: background-color 0.3s ease;
 		z-index: 1000;
 	}
@@ -56,14 +54,14 @@ import { SITE_TITLE } from '../consts';
 		display: flex;
 		justify-content: flex-start;
 		align-items: center;
-		gap: 1.5em;
+		gap: 1em;
 		padding: 0;
 		height: 100%;
 		max-width: 750px;
 		margin: 0 auto;
 	}
 	.site-title a {
-		font-size: 16px;
+		font-size: 14px;
 		color: #111;
 		text-decoration: none;
 		font-weight: 500;
@@ -72,14 +70,14 @@ import { SITE_TITLE } from '../consts';
 	}
 	.nav-links {
 		display: flex;
-		gap: 1.5em;
+		gap: 1em;
 		line-height: 1;
 	}
 	.nav-links a {
 		color: #111;
 		text-decoration: none;
 		font-weight: 400;
-		font-size: 16px;
+		font-size: 14px;
 		transition: color 0.2s;
 	}
 	.nav-links a:hover, .nav-links a.active {
@@ -89,7 +87,7 @@ import { SITE_TITLE } from '../consts';
 		nav {
 			flex-direction: row;
 			align-items: center;
-			gap: 2em;
+			gap: 1.5em;
 			padding: 0 1em;
 		}
 		.site-title {
@@ -97,7 +95,7 @@ import { SITE_TITLE } from '../consts';
 		}
 		.nav-links {
 			flex-direction: row;
-			gap: 2em;
+			gap: 1.5em;
 		}
 	}
 </style>
