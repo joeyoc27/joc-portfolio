@@ -12,16 +12,57 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 	</head>
 	<body>
 		<Header />
-		<main>
-			<h1>Howdy!</h1>
-			<p>
-				I'm Joey
-			</p>
-			<p>
-				I grew up in Westchester, NY and have lived in Austin, TX for the past three years. 
-			</p>
-			<p>I'm a Product Manager at Expedia, responsible for Vrbo and Hotel Partner acqusition and retention.</p>
+		<main class="profile-main">
+			<div class="profile-img">
+				<img src="/images/your-photo.jpg" alt="Joey O'Connor" />
+			</div>
+			<div class="profile-text">
+				<p>My name is Joey O'Connor and I'm currently a Product Manager at Expedia, responsible for Vrbo and Hotel Partner acquisition and retention.</p>
+				<p>I grew up in Westchester, NY and have lived in Austin, TX for the past three years.</p>
+				<p>Outside of work, I enjoy playing tennis, pickleball, and poker.</p>
+				<p>You can reach me via <a href="https://x.com/yourhandle" target="_blank">X</a>, <a href="https://linkedin.com/in/yourprofile" target="_blank">LinkedIn</a>, or <a href="mailto:your@email.com">your@email.com</a>.</p>
+			</div>
 		</main>
 		<Footer />
+		<style>
+			.profile-main {
+				display: flex;
+				align-items: flex-start;
+				max-width: 900px;
+				margin: 3em auto 0 auto;
+				padding: 0 1em;
+				gap: 2em;
+			}
+			.profile-img img {
+				width: 180px;
+				height: 180px;
+				object-fit: cover;
+				border-radius: 12px;
+				background: #eee;
+			}
+			.profile-text {
+				flex: 1;
+				font-size: 1.1em;
+				color: #222;
+			}
+			.profile-text a {
+				color: #2563eb;
+				text-decoration: underline;
+			}
+			@media (max-width: 700px) {
+				.profile-main {
+					flex-direction: column;
+					align-items: center;
+					gap: 1.5em;
+				}
+				.profile-img img {
+					width: 120px;
+					height: 120px;
+				}
+				.profile-text {
+					text-align: center;
+				}
+			}
+		</style>
 	</body>
 </html>

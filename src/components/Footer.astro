@@ -3,13 +3,30 @@ const today = new Date();
 ---
 
 <footer>
-	&copy; {today.getFullYear()} Joey O'Connor. All rights reserved.
+	<div class="footer-links">
+		<a href="https://x.com/yourhandle" target="_blank">X</a>
+		<a href="https://linkedin.com/in/yourprofile" target="_blank">LinkedIn</a>
+		<a href="mailto:your@email.com">your@email.com</a>
+	</div>
 </footer>
 <style>
 	footer {
-		padding: 2em 1em 6em 1em;
-		background: linear-gradient(var(--gray-gradient)) no-repeat;
-		color: rgb(var(--gray));
+		border-top: 1px solid #eee;
+		margin-top: 3em;
+		padding: 1.5em 0 1em 0;
+		background: #fff;
 		text-align: center;
+		font-size: 1em;
+		color: #222;
+	}
+	.footer-links a {
+		margin: 0 1em;
+		color: #111;
+		text-decoration: none;
+		font-weight: 400;
+	}
+	.footer-links a:hover {
+		color: #f38020;
+		text-decoration: underline;
 	}
 </style>
