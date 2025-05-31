@@ -1,7 +1,7 @@
 ---
-title: "Third post"
-description: "Lorem ipsum dolor sit amet"
-pubDate: "Jul 22 2022"
+title: "Vrbo Price Transparency"
+description: "Finding a balance between conversion and fee transparency"
+pubDate: "Summer 2022"
 heroImage: "/blog-placeholder-2.jpg"
 ---
 

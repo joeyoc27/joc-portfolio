@@ -1,7 +1,7 @@
 ---
-title: "Second post"
-description: "Lorem ipsum dolor sit amet"
-pubDate: "Jul 15 2022"
+title: "List Your Property Growth Experimentation"
+description: "CRO Tests to optimize Onboarding top-of-funnel "
+pubDate: "2023-Present"
 heroImage: "/blog-placeholder-4.jpg"
 ---
 
