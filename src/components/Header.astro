@@ -36,14 +36,16 @@ import { SITE_TITLE } from '../consts';
 	header {
 		border-bottom: 1px solid #eee;
 		background: #fff;
-		padding: 1.2em 0;
+		height: var(--header-height);
 		width: 100%;
 		position: fixed;
 		top: 0;
 		left: 0;
 		right: 0;
-		transition: background-color 0.3s ease;
+		transition: all 0.3s ease;
 		z-index: 1000;
+		display: flex;
+		align-items: center;
 	}
 	header.scrolled {
 		background: rgba(255, 255, 255, 0.8);
@@ -90,9 +92,9 @@ import { SITE_TITLE } from '../consts';
 	.nav-links a:hover, .nav-links a.active {
 		color: #0433ff;
 	}
-	@media (max-width: 700px) {
+	@media (max-width: 720px) {
 		header {
-			padding: 1.5em 0;
+			height: var(--header-height-mobile);
 		}
 		nav {
 			flex-direction: row;
