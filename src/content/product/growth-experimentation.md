@@ -21,7 +21,7 @@ Built scalable A/B testing framework to systematically increase experimentation 
 ## Impact
 - Achieved 250+ basis point conversion uplift across Vrbo and Expedia List Your Property pages.
 - Introduced complementary revenue source via Property Management Referral partnerships with Vacasa and AvantStay, capturing previously blocked inventory and generating ongoing revenue share from qualified lead referrals.
-- 
+
 
 ## Learnings
 - Be curious to learn and grow: Effective A/B testing requires staying close to customer feedback and approaching each experiment with an open mind about potential outcomes.
@@ -29,7 +29,45 @@ Built scalable A/B testing framework to systematically increase experimentation 
 
 
 ## Visuals
-
-<div class="centered-image">
-  <img src="/hiw.png" alt="How it works" />
+<div class="visual-map">
+  <div class="visual-item">
+    <img src="/hiw.png" alt="How it Works" />
+    <div class="visual-overlay">How it Works</div>
+  </div>
+  <div class="visual-item">
+    <img src="/hiw.png" alt="How it Works" />
+    <div class="visual-overlay">How it Works</div>
+  </div>
+  <div class="visual-item">
+    <img src="/hiw.png" alt="How it Works" />
+    <div class="visual-overlay">How it Works</div>
+  </div>
+  <div class="visual-item">
+    <img src="/hiw.png" alt="How it Works" />
+    <div class="visual-overlay">How it Works</div>
+  </div>
+  <div class="visual-item">
+    <img src="/hiw.png" alt="How it Works" />
+    <div class="visual-overlay">How it Works</div>
+  </div>
+  <div class="visual-item">
+    <img src="/hiw.png" alt="How it Works" />
+    <div class="visual-overlay">How it Works</div>
+  </div>
+  <div class="visual-item">
+    <img src="/hiw.png" alt="How it Works" />
+    <div class="visual-overlay">How it Works</div>
+  </div>
+  <div class="visual-item">
+    <img src="/hiw.png" alt="How it Works" />
+    <div class="visual-overlay">How it Works</div>
+  </div>
+  <div class="visual-item">
+    <img src="/hiw.png" alt="How it Works" />
+    <div class="visual-overlay">How it Works</div>
+  </div>
+  <div class="visual-item">
+    <img src="/hiw.png" alt="How it Works" />
+    <div class="visual-overlay">How it Works</div>
+  </div>
 </div>

@@ -114,6 +114,47 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 				height: auto;
 				border-radius: 4px;
 			}
+			.prose :global(.visual-map) {
+				display: grid;
+				grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+				gap: 1rem;
+				margin: 2em 0;
+			}
+			.prose :global(.visual-item) {
+				position: relative;
+				border-radius: 4px;
+				overflow: hidden;
+				aspect-ratio: 16/9;
+			}
+			.prose :global(.visual-item img) {
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+				transition: filter 0.3s ease;
+			}
+			.prose :global(.visual-item:hover img) {
+				filter: blur(4px) brightness(0.7);
+			}
+			.prose :global(.visual-overlay) {
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				padding: 1rem;
+				color: white;
+				font-size: 16px;
+				text-align: center;
+				opacity: 0;
+				transition: opacity 0.3s ease;
+				background: rgba(0, 0, 0, 0.2);
+			}
+			.prose :global(.visual-item:hover .visual-overlay) {
+				opacity: 1;
+			}
 		</style>
 	</head>
 
