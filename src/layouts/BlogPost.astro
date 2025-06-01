@@ -257,65 +257,65 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 				<div class="modal-description"></div>
 			</div>
 		</div>
+
+		<script client:load>
+			// Wait for DOM to be ready
+			function setupModal() {
+				const modal = document.getElementById('imageModal');
+				if (!modal) return;
+
+				const modalImage = modal.querySelector('.modal-image');
+				const modalDescription = modal.querySelector('.modal-description');
+				const closeButton = modal.querySelector('.modal-close');
+
+				// Add click handlers to all visual items
+				document.querySelectorAll('.visual-item').forEach(item => {
+					item.addEventListener('click', (e) => {
+						e.preventDefault();
+						const img = item.querySelector('img');
+						const description = item.getAttribute('data-description');
+						
+						if (img && description && modalImage && modalDescription) {
+							modalImage.src = img.src;
+							modalDescription.textContent = description;
+							modal.classList.add('active');
+							document.body.style.overflow = 'hidden';
+						}
+					});
+				});
+
+				// Close modal when clicking close button
+				if (closeButton) {
+					closeButton.addEventListener('click', () => {
+						modal.classList.remove('active');
+						document.body.style.overflow = '';
+					});
+				}
+
+				// Close modal when clicking outside
+				modal.addEventListener('click', (e) => {
+					if (e.target === modal) {
+						modal.classList.remove('active');
+						document.body.style.overflow = '';
+					}
+				});
+
+				// Close modal with escape key
+				document.addEventListener('keydown', (e) => {
+					if (e.key === 'Escape' && modal.classList.contains('active')) {
+						modal.classList.remove('active');
+						document.body.style.overflow = '';
+					}
+				});
+			}
+
+			// Run setup when DOM is ready
+			if (document.readyState === 'loading') {
+				document.addEventListener('DOMContentLoaded', setupModal);
+			} else {
+				setupModal();
+			}
+		</script>
 	</body>
 </html>
-
-<script>
-	// Function to handle modal
-	function setupModal() {
-		const modal = document.getElementById('imageModal');
-		if (!modal) return;
-
-		const modalImage = modal.querySelector('.modal-image');
-		const modalDescription = modal.querySelector('.modal-description');
-		const closeButton = modal.querySelector('.modal-close');
-
-		// Add click handlers to all visual items
-		document.querySelectorAll('.visual-item').forEach(item => {
-			item.addEventListener('click', (e) => {
-				e.preventDefault();
-				const img = item.querySelector('img');
-				const description = item.getAttribute('data-description');
-				
-				if (img && description && modalImage && modalDescription) {
-					modalImage.src = img.src;
-					modalDescription.textContent = description;
-					modal.classList.add('active');
-					document.body.style.overflow = 'hidden';
-				}
-			});
-		});
-
-		// Close modal when clicking close button
-		closeButton?.addEventListener('click', (e) => {
-			e.preventDefault();
-			e.stopPropagation();
-			modal.classList.remove('active');
-			document.body.style.overflow = '';
-		});
-
-		// Close modal when clicking outside
-		modal.addEventListener('click', (e) => {
-			if (e.target === modal) {
-				modal.classList.remove('active');
-				document.body.style.overflow = '';
-			}
-		});
-
-		// Close modal with escape key
-		document.addEventListener('keydown', (e) => {
-			if (e.key === 'Escape' && modal.classList.contains('active')) {
-				modal.classList.remove('active');
-				document.body.style.overflow = '';
-			}
-		});
-	}
-
-	// Setup modal when the DOM is ready
-	if (document.readyState === 'loading') {
-		document.addEventListener('DOMContentLoaded', setupModal);
-	} else {
-		setupModal();
-	}
-</script>
 
