@@ -97,12 +97,22 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 				width: 100%;
 				box-sizing: border-box;
 			}
-			.prose :global(#be-curious) {
+			.prose :global(.hover-orange) {
 				transition: color 0.2s ease;
 				cursor: pointer;
 			}
-			.prose :global(#be-curious:hover) {
+			.prose :global(.hover-orange:hover) {
 				color: #F48120;
+			}
+			.prose :global(.centered-image) {
+				display: flex;
+				justify-content: center;
+				margin: 2em 0;
+			}
+			.prose :global(.centered-image img) {
+				max-width: 100%;
+				height: auto;
+				border-radius: 4px;
 			}
 		</style>
 	</head>
@@ -149,12 +159,17 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 		const learningsSection = document.querySelector('.prose');
 		if (!learningsSection) return;
 
-		const targetText = 'Be curious to learn and grow';
-		const regex = new RegExp(`(${targetText})`, 'g');
+		const targetPhrases = [
+			'Be curious to learn and grow',
+			'Get your work across the finish line & communicate clearly'
+		];
 
-		learningsSection.innerHTML = learningsSection.innerHTML.replace(
-			regex,
-			'<span id="be-curious">$1</span>'
-		);
+		let content = learningsSection.innerHTML;
+		targetPhrases.forEach(phrase => {
+			const regex = new RegExp(`(${phrase})`, 'g');
+			content = content.replace(regex, '<span class="hover-orange">$1</span>');
+		});
+
+		learningsSection.innerHTML = content;
 	});
 </script>

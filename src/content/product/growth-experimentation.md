@@ -6,23 +6,30 @@ heroImage: '/blog-placeholder-2.jpg'
 ---
 
 ## The Challenge
-Brief context on the problem you were solving (2-3 sentences max). Keep it high-level without exposing sensitive company details.
-The Sign-up (List Your Property) is the top of EG's Lodging Onboarding funnel. Due to a stable core onboarding conversion, any conversion improvement here translates to an increase in onboarding volume. 
+The sign-up page (List Your Property) drives EG's property acquisition pipeline. With stable core onboarding performance, conversion improvements at this funnel entry point translate directly to measurable business growth.
 
 ## Key Insights
-- First key insight about the problem
-- Second key insight from user research
-- Third critical finding that shaped approach
-- When I first joined the team, there were lots of low hanging fruit. Copy and branding was bland and basic components like FAQs, video testimonials, and clear CTAs were missing. My first priority was introducing these before moving on to more interesting experiments. 
+Upon joining, I identified fundamental gaps: bland copy/branding and missing core conversion elements like FAQs, video testimonials, and clear CTAs. Implementing these foundational improvements became the priority before advancing to complex experiments.
+
+Following this baseline work, I collaborated with sales and support teams to identify and resolve key customer pain points, accelerating time-to-go-live. 
+
+
 
 ## Solution
-Created repeatable framework for launching a/b tests to increase experimentation velocity. Migrated content layer to Adobe Experience Manager to reduce engineering load for minor content updates, freeing up capacity for more complex enhancements. 
+Built scalable A/B testing framework to systematically increase experimentation velocity while reducing engineering bottlenecks. Migrated content management to Adobe Experience Manager, enabling non-technical teams to execute minor updates independently and freeing engineering capacity for high-impact feature development.
 
 ## Impact
-- 250 basis point conversion uplift across Vrbo and Expedia List Your Property pages.
+- Achieved 250+ basis point conversion uplift across Vrbo and Expedia List Your Property pages.
 - Introduced complementary revenue source via Property Management Referral partnerships with Vacasa and AvantStay, capturing previously blocked inventory and generating ongoing revenue share from qualified lead referrals.
 - 
 
 ## Learnings
-Be curious to learn and grow - Brainstorming great a/b tests requires keeping an ear to the ground and going into tests with an open mind. 
-Get your work across the finish line & communicate clearly - Getting test launched quickly requires shepharding across various teams -- engineering, marketing, design, analytics, legal.
+- Be curious to learn and grow: Effective A/B testing requires staying close to customer feedback and approaching each experiment with an open mind about potential outcomes.
+- Get your work across the finish line and communicate clearly: Rapid test deployment depends on coordinating across engineering, marketing, design, analytics, and legal teams to maintain momentum.
+
+
+## Visuals
+
+<div class="centered-image">
+  <img src="/hiw.png" alt="How it works" />
+</div>
