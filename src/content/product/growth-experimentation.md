@@ -29,9 +29,9 @@ Built scalable A/B testing framework to systematically increase experimentation 
 
 
 ## Visuals
-Click each to learn more. 
-<div class="visual-map">
-  <div class="visual-item" data-description="This diagram shows the step-by-step process of how our property onboarding system works. It illustrates the journey from initial sign-up through to property activation, highlighting key touchpoints and decision nodes along the way.">
+Click each to learn more.
+<div class="visual-map" data-astro-cid>
+  <div class="visual-item" data-description="This diagram shows the step-by-step process of how our property onboarding system works. It illustrates the journey from initial sign-up through to property activation, highlighting key touchpoints and decision nodes along the way." data-astro-cid>
     <img src="/hiw.png" alt="How it Works" />
     <div class="visual-overlay">How it Works</div>
   </div>

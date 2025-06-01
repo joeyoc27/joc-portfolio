@@ -248,28 +248,23 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 		<div class="container">
 			<Footer />
 		</div>
-	</body>
-</html>
 
-<script is:inline>
-	document.addEventListener('DOMContentLoaded', () => {
-		// Remove any existing modal first
-		const existingModal = document.querySelector('.modal');
-		if (existingModal) {
-			existingModal.remove();
-		}
-
-		// Create new modal
-		const modal = document.createElement('div');
-		modal.className = 'modal';
-		modal.innerHTML = `
+		<!-- Modal Template -->
+		<div id="imageModal" class="modal">
 			<div class="modal-content">
 				<button class="modal-close">&times;</button>
 				<img class="modal-image" src="" alt="">
 				<div class="modal-description"></div>
 			</div>
-		`;
-		document.body.appendChild(modal);
+		</div>
+	</body>
+</html>
+
+<script>
+	// Function to handle modal
+	function setupModal() {
+		const modal = document.getElementById('imageModal');
+		if (!modal) return;
 
 		const modalImage = modal.querySelector('.modal-image');
 		const modalDescription = modal.querySelector('.modal-description');
@@ -282,7 +277,7 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 				const img = item.querySelector('img');
 				const description = item.getAttribute('data-description');
 				
-				if (img && description) {
+				if (img && description && modalImage && modalDescription) {
 					modalImage.src = img.src;
 					modalDescription.textContent = description;
 					modal.classList.add('active');
@@ -292,7 +287,7 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 		});
 
 		// Close modal when clicking close button
-		closeButton.addEventListener('click', (e) => {
+		closeButton?.addEventListener('click', (e) => {
 			e.preventDefault();
 			e.stopPropagation();
 			modal.classList.remove('active');
@@ -314,6 +309,13 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 				document.body.style.overflow = '';
 			}
 		});
-	});
+	}
+
+	// Setup modal when the DOM is ready
+	if (document.readyState === 'loading') {
+		document.addEventListener('DOMContentLoaded', setupModal);
+	} else {
+		setupModal();
+	}
 </script>
 
