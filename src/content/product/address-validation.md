@@ -22,4 +22,5 @@ Short description of what we built and key features. Focus on your role and deci
 - Z% reduction in support time
 
 ## Learnings
-Brief reflection on key takeaways or skills developed. 
+Embrace diversity
+Communicate clearly, directly and transparently

@@ -23,5 +23,5 @@ Short description of what we built and key features. Focus on your role and deci
 
 ## Learnings
 Brief reflection on key takeaways or skills developed.
-
-Coming soon! I'll share insights from my experience founding and growing Decoro Media, a direct response marketing firm. 
+Get work across teh finish line
+Lead with empathy
