@@ -97,6 +97,13 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 				width: 100%;
 				box-sizing: border-box;
 			}
+			.prose :global(#be-curious) {
+				transition: color 0.2s ease;
+				cursor: pointer;
+			}
+			.prose :global(#be-curious:hover) {
+				color: #F48120;
+			}
 		</style>
 	</head>
 
@@ -135,3 +142,19 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 		</div>
 	</body>
 </html>
+
+<script>
+	// Find the text and wrap it in a span
+	document.addEventListener('DOMContentLoaded', () => {
+		const learningsSection = document.querySelector('.prose');
+		if (!learningsSection) return;
+
+		const targetText = 'Be curious to learn and grow';
+		const regex = new RegExp(`(${targetText})`, 'g');
+
+		learningsSection.innerHTML = learningsSection.innerHTML.replace(
+			regex,
+			'<span id="be-curious">$1</span>'
+		);
+	});
+</script>
