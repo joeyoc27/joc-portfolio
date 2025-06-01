@@ -6,21 +6,23 @@ heroImage: '/blog-placeholder-2.jpg'
 ---
 
 ## The Challenge
-Brief context on the problem you were solving (2-3 sentences max). Keep it high-level without exposing sensitive company details.
+Expedia Group has a vast network of travelers, but we don't effectively convert them into vacation rental hosts. We aim to launch an incentive program to acquire new hosts and create a host-to-host referral system to tap into this existing user base.
 
 ## Key Insights
-- First key insight about the problem
-- Second key insight from user research
-- Third critical finding that shaped approach
+- Airbnb already offers a robust rewards program that serves as a proven driver for low-cost, high-quality leads and long-term loyalty
+- Ther eis a relatively low overlap between Travelers and Hosts. Vrbo Hosts who travel with EG have 52% higher GBV than non-host travelers.
 
 ## Solution
-Short description of what we built and key features. Focus on your role and decision-making process.
+We designed a host acquisition program offering One Key Cash rewards to new hosts upon reaching listing and booking milestones. The program includes both direct incentives for new hosts and a referral system allowing existing hosts to earn additional rewards.
 
 ## Impact
-- X% improvement in key metric
-- Y% increase in efficiency
-- Z% reduction in support time
+- There is an opportunity size of $12.2MM eRMD and to gain 15k incremental global new listings in the first 12 months. 
 
 ## Learnings
-Get work across the finish line
-Mention WayToGo shoutout from Aaron Rose
+- <span class="hover-orange">Do the right thing</span>: Applied game theory thinking to prevent bad actors from gaming the incentive system
+- <span class="hover-orange">Get your work across the finish line</span>: Navigated complex legal, compliance, and technical challenges to launch the rewards program. 
+    - Earned cross-EG recognition from Incentive Platform lead for building POC data stream to unblock the program.
+
+<div style="display: flex; justify-content: center; margin: 2em 0;">
+  <img src="/shoutout.png" alt="WayToGo Shoutout" style="width: 90px; height: auto; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.08);" />
+</div>
