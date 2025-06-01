@@ -1,0 +1,166 @@
+<div id="imageModal" class="modal">
+  <div class="modal-content">
+    <button class="modal-close">&times;</button>
+    <img class="modal-image" src="" alt="">
+    <div class="modal-description"></div>
+  </div>
+</div>
+
+<script client:load>
+  class VisualModal {
+    constructor() {
+      this.modal = document.getElementById('imageModal');
+      this.modalImage = this.modal?.querySelector('.modal-image');
+      this.modalDescription = this.modal?.querySelector('.modal-description');
+      this.closeButton = this.modal?.querySelector('.modal-close');
+      this.setupEventListeners();
+    }
+
+    setupEventListeners() {
+      if (!this.modal || !this.closeButton) return;
+
+      // Setup visual item click handlers
+      document.querySelectorAll('.visual-item').forEach(item => {
+        item.addEventListener('click', (e) => {
+          e.preventDefault();
+          this.openModal(item);
+        });
+      });
+
+      // Close button handler
+      this.closeButton.addEventListener('click', () => this.closeModal());
+
+      // Close on background click
+      this.modal.addEventListener('click', (e) => {
+        if (e.target === this.modal) {
+          this.closeModal();
+        }
+      });
+
+      // Close on escape key
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+          this.closeModal();
+        }
+      });
+    }
+
+    openModal(item) {
+      if (!this.modal || !this.modalImage || !this.modalDescription) return;
+
+      const img = item.querySelector('img');
+      const description = item.getAttribute('data-description');
+
+      if (img && img.src) {
+        this.modalImage.src = img.src;
+        this.modalImage.alt = img.alt || '';
+      }
+
+      if (description) {
+        this.modalDescription.textContent = description;
+      }
+
+      this.modal.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+
+    closeModal() {
+      if (!this.modal) return;
+
+      this.modal.classList.remove('active');
+      document.body.style.overflow = '';
+
+      // Clear image source after animation
+      setTimeout(() => {
+        if (this.modalImage) {
+          this.modalImage.src = '';
+        }
+      }, 300);
+    }
+  }
+
+  // Initialize modal when DOM is ready
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', () => new VisualModal());
+  } else {
+    new VisualModal();
+  }
+</script>
+
+<style>
+  .modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.85);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+
+  .modal.active {
+    display: flex;
+    opacity: 1;
+  }
+
+  .modal-content {
+    position: relative;
+    max-width: 90%;
+    max-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    transform: scale(0.95);
+    transition: transform 0.3s ease;
+  }
+
+  .modal.active .modal-content {
+    transform: scale(1);
+  }
+
+  .modal-image {
+    width: 100%;
+    height: auto;
+    max-height: 70vh;
+    object-fit: contain;
+  }
+
+  .modal-description {
+    padding: 1.5rem;
+    background: white;
+    color: #111;
+    font-size: 16px;
+    line-height: 1.6;
+  }
+
+  .modal-close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    width: 2rem;
+    height: 2rem;
+    background: white;
+    border: none;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    line-height: 1;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    color: #111;
+    transition: all 0.2s ease;
+  }
+
+  .modal-close:hover {
+    background: #eee;
+  }
+</style> 

@@ -4,7 +4,8 @@ import cloudflare from "@astrojs/cloudflare";
 
 // https://astro.build/config
 export default defineConfig({
-  output: 'server',
+  output: 'static',
+  site: 'https://joc-portfolio.joeyoc27.workers.dev',
   adapter: cloudflare({
     imageService: 'cloudflare',
     platformProxy: {
@@ -13,8 +14,8 @@ export default defineConfig({
   }),
   vite: {
     build: {
-      minify: false, // Helps with debugging
       assetsInlineLimit: 0,
     },
+    logLevel: 'info',
   },
 });

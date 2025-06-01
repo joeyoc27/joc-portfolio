@@ -1,16 +1,25 @@
 ---
 interface Props {
-	date?: Date;
+	date?: Date | string;
 	season?: string;
 }
 
 const { date, season } = Astro.props;
+
+function formatDate(date: Date | string | undefined) {
+	if (!date) return undefined;
+	if (typeof date === 'string') return date;
+	return date.toLocaleDateString('en-us', {
+		year: 'numeric',
+		month: 'short',
+		day: 'numeric',
+	});
+}
+
+const isoDate = date instanceof Date ? date.toISOString() : undefined;
+const displayDate = formatDate(date);
 ---
 
-<time datetime={date ? date.toISOString() : undefined}>
-	{season ? season : date && date.toLocaleDateString('en-us', {
-			year: 'numeric',
-			month: 'short',
-			day: 'numeric',
-	})}
+<time datetime={isoDate}>
+	{season || displayDate}
 </time>

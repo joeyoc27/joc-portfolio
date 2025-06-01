@@ -3,14 +3,37 @@ import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+
+// Add error handling
+let error = null;
+try {
+	// Test if we can access runtime
+	const runtime = Astro.locals.runtime;
+} catch (e) {
+	error = e;
+	console.error('Error in index.astro:', e);
+}
 ---
 
 <!doctype html>
 <html lang="en">
 	<head>
 		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+		<style is:global>
+			/* Ensure the page is visible even if styles fail to load */
+			body {
+				display: block !important;
+				opacity: 1 !important;
+				background: white !important;
+			}
+		</style>
 	</head>
 	<body>
+		{error && 
+			<div style="color: red; padding: 20px;">
+				Error loading page: {error.message}
+			</div>
+		}
 		<div class="container">
 			<Header />
 		</div>

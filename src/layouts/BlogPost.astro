@@ -4,6 +4,7 @@ import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import FormattedDate from '../components/FormattedDate.astro';
+import VisualModal from '../components/VisualModal.astro';
 
 type Props = CollectionEntry<'product' | 'marketing'>['data'];
 
@@ -153,83 +154,22 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 			.prose :global(.visual-item:hover .visual-overlay) {
 				opacity: 1;
 			}
-			.prose :global(.modal) {
-				position: fixed;
-				top: 0;
-				left: 0;
-				width: 100%;
-				height: 100%;
-				background: rgba(0, 0, 0, 0.85);
-				display: none;
-				justify-content: center;
-				align-items: center;
-				z-index: 1000;
-			}
-			.prose :global(.modal.active) {
-				display: flex;
-			}
-			.prose :global(.modal-content) {
-				position: relative;
-				max-width: 90%;
-				max-height: 90vh;
-				display: flex;
-				flex-direction: column;
-				background: white;
-				border-radius: 8px;
-				overflow: hidden;
-			}
-			.prose :global(.modal-image) {
-				width: 100%;
-				height: auto;
-				max-height: 70vh;
-				object-fit: contain;
-			}
-			.prose :global(.modal-description) {
-				padding: 1.5rem;
-				background: white;
-				color: #111;
-				font-size: 16px;
-				line-height: 1.6;
-			}
-			.prose :global(.modal-close) {
-				position: absolute;
-				top: 1rem;
-				right: 1rem;
-				width: 2rem;
-				height: 2rem;
-				background: white;
-				border: none;
-				border-radius: 50%;
-				font-size: 1.5rem;
-				line-height: 1;
-				cursor: pointer;
-				z-index: 1001;
-				display: flex;
-				align-items: center;
-				justify-content: center;
-				padding: 0;
-			}
-			.prose :global(.modal-close:hover) {
-				background: #eee;
-			}
 		</style>
 	</head>
 
 	<body>
-		<Header />
+		<div class="container">
+			<Header />
+		</div>
 		<main>
 			<article>
-				<div class="hero-image">
-					{heroImage && <img width={1020} height={510} src={heroImage} alt="" />}
-				</div>
+				{heroImage && <div class="hero-image">
+					<img width={720} height={360} src={heroImage} alt="" />
+				</div>}
 				<div class="prose">
 					<div class="title">
 						<div class="date">
-							{typeof pubDate === 'string' ? (
-								<FormattedDate season={pubDate} />
-							) : (
 							<FormattedDate date={pubDate} />
-							)}
 							{
 								updatedDate && (
 									<div class="last-updated-on">
@@ -239,7 +179,6 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 							}
 						</div>
 						<h1>{title}</h1>
-						<hr />
 					</div>
 					<slot />
 				</div>
@@ -248,74 +187,7 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 		<div class="container">
 			<Footer />
 		</div>
-
-		<!-- Modal Template -->
-		<div id="imageModal" class="modal">
-			<div class="modal-content">
-				<button class="modal-close">&times;</button>
-				<img class="modal-image" src="" alt="">
-				<div class="modal-description"></div>
-			</div>
-		</div>
-
-		<script client:load>
-			// Wait for DOM to be ready
-			function setupModal() {
-				const modal = document.getElementById('imageModal');
-				if (!modal) return;
-
-				const modalImage = modal.querySelector('.modal-image');
-				const modalDescription = modal.querySelector('.modal-description');
-				const closeButton = modal.querySelector('.modal-close');
-
-				// Add click handlers to all visual items
-				document.querySelectorAll('.visual-item').forEach(item => {
-					item.addEventListener('click', (e) => {
-						e.preventDefault();
-						const img = item.querySelector('img');
-						const description = item.getAttribute('data-description');
-						
-						if (img && description && modalImage && modalDescription) {
-							modalImage.src = img.src;
-							modalDescription.textContent = description;
-							modal.classList.add('active');
-							document.body.style.overflow = 'hidden';
-						}
-					});
-				});
-
-				// Close modal when clicking close button
-				if (closeButton) {
-					closeButton.addEventListener('click', () => {
-						modal.classList.remove('active');
-						document.body.style.overflow = '';
-					});
-				}
-
-				// Close modal when clicking outside
-				modal.addEventListener('click', (e) => {
-					if (e.target === modal) {
-						modal.classList.remove('active');
-						document.body.style.overflow = '';
-					}
-				});
-
-				// Close modal with escape key
-				document.addEventListener('keydown', (e) => {
-					if (e.key === 'Escape' && modal.classList.contains('active')) {
-						modal.classList.remove('active');
-						document.body.style.overflow = '';
-					}
-				});
-			}
-
-			// Run setup when DOM is ready
-			if (document.readyState === 'loading') {
-				document.addEventListener('DOMContentLoaded', setupModal);
-			} else {
-				setupModal();
-			}
-		</script>
+		<VisualModal />
 	</body>
 </html>
 
