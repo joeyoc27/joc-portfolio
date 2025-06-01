@@ -1,26 +1,24 @@
 ---
 title: 'Preserving Trips Admin'
-description: "Saving Vrbo's internal support tool."
+description: "Saving Vrbo's internal support tool"
 pubDate: 'Winter 2023'
 heroImage: '/blog-placeholder-2.jpg'
 ---
 
 ## The Challenge
-Brief context on the problem you were solving (2-3 sentences max). Keep it high-level without exposing sensitive company details.
+Vrbo's primary internal admin tool (Trips Admin) was built on Adobe ColdFusion, creating significant security vulnerabilities and maintenence costs due to the outdated technology stack. With limited resources, we needed to rebuild the application while strategically prioritizing which functionality to maintain versus deprecate.
 
 ## Key Insights
-- First key insight about the problem
-- Second key insight from user research
-- Third critical finding that shaped approach
+- Limited capacity: We only had one developer for one quarter able to execute on this
+- Trips Admin is used daily by thousands of EG employees spanning Customer Support, Partner Success, Sales, and Engineering. 
+- Authentication integration was the most complex challenge due to Expedia Group's fragmented auth systems across different user type
 
 ## Solution
-Short description of what we built and key features. Focus on your role and decision-making process.
+We strategically stripped the tool of low-usage features and rebuilt core functionality on a modern tech stack. The streamlined application was successfully delivered by the end of the quarter, focusing resources on essential admin capabilities while eliminating security vulnerabilities.
 
 ## Impact
-- X% improvement in key metric
-- Y% increase in efficiency
-- Z% reduction in support time
+- Tool was rebuilt on modern tech stack, paving way for low-cost improvements in future. 
+- Previous risk of brownouts fully eliminated.
 
 ## Learnings
-Brief reflection on key takeaways or skills developed.
-Get work across the finish line
+<span class="hover-orange">Get your work across the finish line</span>: Delivered under tight deadlines with minimal resources through ruthless prioritization.

@@ -1,6 +1,6 @@
 ---
 title: 'Hotel Closures ML Traveler Alerts'
-description: 'Reducing traveler impact via automated closure notifications.'
+description: 'Reducing traveler impact via automated closure notifications'
 pubDate: 'Summer 2024'
 heroImage: '/blog-placeholder-2.jpg'
 ---

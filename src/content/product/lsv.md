@@ -1,6 +1,6 @@
 ---
 title: 'Listing Status Visibility'
-description: 'Providing transparency and self-service tools for property status.'
+description: 'Providing transparency and self-service tools for property status'
 pubDate: 'Fall 2024'
 heroImage: '/blog-placeholder-2.jpg'
 ---
