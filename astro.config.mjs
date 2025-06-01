@@ -6,7 +6,6 @@ import cloudflare from "@astrojs/cloudflare";
 export default defineConfig({
   output: 'server',
   adapter: cloudflare({
-    mode: 'directory',
     imageService: 'cloudflare',
     platformProxy: {
       enabled: true,
@@ -15,6 +14,7 @@ export default defineConfig({
   vite: {
     build: {
       minify: false, // Helps with debugging
+      assetsInlineLimit: 0,
     },
   },
 });
