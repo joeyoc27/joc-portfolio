@@ -20,7 +20,7 @@ Opportunity sizing of $12.2MM eRMD and gain of 15k incremental global new listin
 
 ## Learnings
 - <span class="hover-orange">Do the right thing</span>: Applied game theory thinking to prevent bad actors from gaming the incentive system.
-- <span class="hover-orange">Get your work across the finish line</span>: Navigated complex legal, compliance, and technical challenges to launch the rewards program. 
+- <span class="hover-orange">Get your work across the finish line:</span> Navigated complex legal, compliance, and technical challenges to launch the rewards program. 
     - Earned cross-EG recognition from Incentive Platform lead for building POC data stream to unblock the program.
 
 <div style="display: flex; justify-content: center; margin: 2em 0;">
