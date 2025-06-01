@@ -31,39 +31,39 @@ Built scalable A/B testing framework to systematically increase experimentation 
 ## Visuals
 Click each to learn more.
 <div class="visual-map" data-astro-cid>
-  <div class="visual-item" data-description="This diagram shows the step-by-step process of how our property onboarding system works. It illustrates the journey from initial sign-up through to property activation, highlighting key touchpoints and decision nodes along the way." data-astro-cid>
+  <div class="visual-item" data-description="**PM Referral:**" data-astro-cid>
     <img src="/hiw.png" alt="PM Referral" />
     <div class="visual-overlay">PM Referral</div>
   </div>
-  <div class="visual-item" data-description="A detailed view of our onboarding workflow, showcasing the intuitive interface and streamlined process we've developed to make property listing as simple as possible for new hosts.">
+  <div class="visual-item" data-description="**Rotating Value Props:**">
     <img src="/hiw.png" alt="Rotating Value Props" />
     <div class="visual-overlay">Rotating Value Props</div>
   </div>
-  <div class="visual-item" data-description="Visual representation of our property verification system, demonstrating the multiple layers of validation we use to ensure quality listings and maintain trust in our platform.">
+  <div class="visual-item" data-description="**Competitor Link Collection:**">
     <img src="/hiw.png" alt="Competitor Link Collection" />
     <div class="visual-overlay">Competitor Link Collection</div>
   </div>
-  <div class="visual-item" data-description="Overview of the host dashboard, showing key metrics and management tools that property owners use to maintain their listings and track performance.">
+  <div class="visual-item" data-description="**Branding Overhauls:**">
     <img src="/hiw.png" alt="Branding Overhauls" />
     <div class="visual-overlay">Branding Overhauls</div>
   </div>
-  <div class="visual-item" data-description="Illustration of our payment processing system, highlighting the secure and efficient way we handle transactions between guests and hosts.">
+  <div class="visual-item" data-description="How it Works: ">
     <img src="/hiw.png" alt="How it Works" />
     <div class="visual-overlay">How it Works</div>
   </div>
-  <div class="visual-item" data-description="Breakdown of our customer support infrastructure, showing how we provide assistance at every stage of the property listing process.">
+  <div class="visual-item" data-description="**Video Testimonials:** ">
     <img src="/hiw.png" alt="Video Testimonials" />
     <div class="visual-overlay">Video Testimonials</div>
   </div>
-  <div class="visual-item" data-description="Visualization of our property optimization suggestions, demonstrating how we help hosts improve their listings for better visibility and booking rates.">
+  <div class="visual-item" data-description="**FAQs:** ">
     <img src="/hiw.png" alt="FAQs" />
     <div class="visual-overlay">FAQs</div>
   </div>
-  <div class="visual-item" data-description="Overview of our market analysis tools, showing how we provide hosts with valuable insights about their local market and competition.">
+  <div class="visual-item" data-description="**Sticky Banner:** ">
     <img src="/hiw.png" alt="Sticky Banner" />
     <div class="visual-overlay">Sticky Banner</div>
   </div>
-  <div class="visual-item" data-description="Illustration of our booking management system, highlighting the tools hosts use to manage their calendar, rates, and availability.">
+  <div class="visual-item" data-description="**Earnings Calculator Model Swap:** ">
     <img src="/hiw.png" alt="Earnings Calculator Model Swap" />
     <div class="visual-overlay">Earnings Calculator Model Swap</div>
   </div>

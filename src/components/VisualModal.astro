@@ -45,6 +45,11 @@
       });
     }
 
+    parseMarkdown(text) {
+      // Convert markdown bold to HTML
+      return text.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
+    }
+
     openModal(item) {
       if (!this.modal || !this.modalImage || !this.modalDescription) return;
 
@@ -57,7 +62,7 @@
       }
 
       if (description) {
-        this.modalDescription.textContent = description;
+        this.modalDescription.innerHTML = this.parseMarkdown(description);
       }
 
       this.modal.classList.add('active');
@@ -74,6 +79,9 @@
       setTimeout(() => {
         if (this.modalImage) {
           this.modalImage.src = '';
+        }
+        if (this.modalDescription) {
+          this.modalDescription.innerHTML = '';
         }
       }, 300);
     }
@@ -138,6 +146,11 @@
     color: #111;
     font-size: 16px;
     line-height: 1.6;
+  }
+
+  .modal-description :global(strong) {
+    color: #000;
+    font-weight: 600;
   }
 
   .modal-close {
