@@ -159,18 +159,17 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 				left: 0;
 				width: 100%;
 				height: 100%;
-				background: rgba(0, 0, 0, 0.9);
+				background: rgba(0, 0, 0, 0.85);
 				display: none;
 				justify-content: center;
 				align-items: center;
 				z-index: 1000;
-				padding: 2rem;
-				box-sizing: border-box;
 			}
 			.prose :global(.modal.active) {
 				display: flex;
 			}
 			.prose :global(.modal-content) {
+				position: relative;
 				max-width: 90%;
 				max-height: 90vh;
 				display: flex;
@@ -196,12 +195,22 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 				position: absolute;
 				top: 1rem;
 				right: 1rem;
-				color: white;
-				font-size: 2rem;
-				cursor: pointer;
-				background: none;
+				width: 2rem;
+				height: 2rem;
+				background: white;
 				border: none;
-				padding: 0.5rem;
+				border-radius: 50%;
+				font-size: 1.5rem;
+				line-height: 1;
+				cursor: pointer;
+				z-index: 1001;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				padding: 0;
+			}
+			.prose :global(.modal-close:hover) {
+				background: #eee;
 			}
 		</style>
 	</head>
@@ -242,63 +251,57 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 	</body>
 </html>
 
-<script>
-	// Find the text and wrap it in a span
+<script is:inline>
 	document.addEventListener('DOMContentLoaded', () => {
-		const learningsSection = document.querySelector('.prose');
-		if (!learningsSection) return;
-
-		const targetPhrases = [
-			'Be curious to learn and grow',
-			'Get your work across the finish line & communicate clearly'
-		];
-
-		let content = learningsSection.innerHTML;
-		targetPhrases.forEach(phrase => {
-			const regex = new RegExp(`(${phrase})`, 'g');
-			content = content.replace(regex, '<span class="hover-orange">$1</span>');
-		});
-
-		learningsSection.innerHTML = content;
-	});
-
-	document.addEventListener('DOMContentLoaded', () => {
-		const visualItems = document.querySelectorAll('.visual-item');
-		let modal = document.querySelector('.modal');
-		
-		// Create modal if it doesn't exist
-		if (!modal) {
-			modal = document.createElement('div');
-			modal.className = 'modal';
-			modal.innerHTML = `
-				<button class="modal-close">&times;</button>
-				<div class="modal-content">
-					<img class="modal-image" src="" alt="">
-					<div class="modal-description"></div>
-				</div>
-			`;
-			document.body.appendChild(modal);
+		// Remove any existing modal first
+		const existingModal = document.querySelector('.modal');
+		if (existingModal) {
+			existingModal.remove();
 		}
+
+		// Create new modal
+		const modal = document.createElement('div');
+		modal.className = 'modal';
+		modal.innerHTML = `
+			<div class="modal-content">
+				<button class="modal-close">&times;</button>
+				<img class="modal-image" src="" alt="">
+				<div class="modal-description"></div>
+			</div>
+		`;
+		document.body.appendChild(modal);
 
 		const modalImage = modal.querySelector('.modal-image');
 		const modalDescription = modal.querySelector('.modal-description');
 		const closeButton = modal.querySelector('.modal-close');
 
-		visualItems.forEach(item => {
-			item.addEventListener('click', () => {
+		// Add click handlers to all visual items
+		document.querySelectorAll('.visual-item').forEach(item => {
+			item.addEventListener('click', (e) => {
+				e.preventDefault();
 				const img = item.querySelector('img');
 				const description = item.getAttribute('data-description');
 				
-				modalImage.src = img.src;
-				modalDescription.textContent = description;
-				modal.classList.add('active');
-				document.body.style.overflow = 'hidden';
+				if (img && description) {
+					modalImage.src = img.src;
+					modalDescription.textContent = description;
+					modal.classList.add('active');
+					document.body.style.overflow = 'hidden';
+				}
 			});
 		});
 
-		// Close modal when clicking close button or outside
+		// Close modal when clicking close button
+		closeButton.addEventListener('click', (e) => {
+			e.preventDefault();
+			e.stopPropagation();
+			modal.classList.remove('active');
+			document.body.style.overflow = '';
+		});
+
+		// Close modal when clicking outside
 		modal.addEventListener('click', (e) => {
-			if (e.target === modal || e.target === closeButton) {
+			if (e.target === modal) {
 				modal.classList.remove('active');
 				document.body.style.overflow = '';
 			}
@@ -313,3 +316,4 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 		});
 	});
 </script>
+
