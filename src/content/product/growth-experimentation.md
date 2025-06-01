@@ -31,39 +31,39 @@ Built scalable A/B testing framework to systematically increase experimentation 
 ## Visuals
 Click each to learn more.
 <div class="visual-map" data-astro-cid>
-  <div class="visual-item" data-description="**PM Referral:**" data-astro-cid>
+  <div class="visual-item" data-description="**PM Referral:** We partnered with Vacasa, the largest vacation rental property management company in the US, to offer a solution for hosts struggling with day-to-day Vrbo operations." data-astro-cid>
     <img src="/hiw.png" alt="PM Referral" />
     <div class="visual-overlay">PM Referral</div>
   </div>
-  <div class="visual-item" data-description="**Rotating Value Props:**">
+  <div class="visual-item" data-description="**Rotating Value Props:**  A dynamic hero section featuring animated value propositions that cycle through Vrbo's key benefits, showcasing different reasons to choose the platform with smooth transitions.">
     <img src="/hiw.png" alt="Rotating Value Props" />
     <div class="visual-overlay">Rotating Value Props</div>
   </div>
-  <div class="visual-item" data-description="**Competitor Link Collection:**">
+  <div class="visual-item" data-description="**Competitor Link Collection:** A streamlined onboarding feature that allows hosts to paste their Airbnb or Booking.com listing URLs to quickly import property details and accelerate their Vrbo setup process.">
     <img src="/hiw.png" alt="Competitor Link Collection" />
     <div class="visual-overlay">Competitor Link Collection</div>
   </div>
-  <div class="visual-item" data-description="**Branding Overhauls:**">
+  <div class="visual-item" data-description="**Branding Overhauls:** Creative refresh initiatives to modernize the site's visual identity and keep the brand experience current and engaging for users.">
     <img src="/hiw.png" alt="Branding Overhauls" />
     <div class="visual-overlay">Branding Overhauls</div>
   </div>
-  <div class="visual-item" data-description="How it Works: ">
+  <div class="visual-item" data-description="How it Works: An interactive overview component that guides users through the Vrbo listing process, providing a step-by-step visual walkthrough of what hosting on the platform entails.">
     <img src="/hiw.png" alt="How it Works" />
     <div class="visual-overlay">How it Works</div>
   </div>
-  <div class="visual-item" data-description="**Video Testimonials:** ">
+  <div class="visual-item" data-description="**Video Testimonials:** Enhanced user testimonials featuring dynamic video content to replace static reviews, providing more engaging and authentic host experiences.">
     <img src="/hiw.png" alt="Video Testimonials" />
     <div class="visual-overlay">Video Testimonials</div>
   </div>
-  <div class="visual-item" data-description="**FAQs:** ">
+  <div class="visual-item" data-description="**FAQs:** A comprehensive frequently asked questions section addressing common host concerns and objections, designed to reduce listing anxiety and support the conversion process.">
     <img src="/hiw.png" alt="FAQs" />
     <div class="visual-overlay">FAQs</div>
   </div>
-  <div class="visual-item" data-description="**Sticky Banner:** ">
+  <div class="visual-item" data-description="**Sticky Banner:** A persistent call-to-action banner that remains visible as users scroll, ensuring conversion opportunities are always accessible throughout the site experience.">
     <img src="/hiw.png" alt="Sticky Banner" />
     <div class="visual-overlay">Sticky Banner</div>
   </div>
-  <div class="visual-item" data-description="**Earnings Calculator Model Swap:** ">
+  <div class="visual-item" data-description="**Earnings Calculator Model Swap:** Upgraded the existing earnings calculator by replacing the backend with a new machine learning model built on expanded AirDNA data for improved accuracy. ">
     <img src="/hiw.png" alt="Earnings Calculator Model Swap" />
     <div class="visual-overlay">Earnings Calculator Model Swap</div>
   </div>
