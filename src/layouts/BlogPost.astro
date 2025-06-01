@@ -125,6 +125,7 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 				border-radius: 4px;
 				overflow: hidden;
 				aspect-ratio: 16/9;
+				cursor: pointer;
 			}
 			.prose :global(.visual-item img) {
 				width: 100%;
@@ -137,23 +138,70 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 			}
 			.prose :global(.visual-overlay) {
 				position: absolute;
-				top: 0;
-				left: 0;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
 				width: 100%;
-				height: 100%;
-				display: flex;
-				align-items: center;
-				justify-content: center;
 				padding: 1rem;
 				color: white;
 				font-size: 16px;
 				text-align: center;
 				opacity: 0;
 				transition: opacity 0.3s ease;
-				background: rgba(0, 0, 0, 0.2);
+				pointer-events: none;
 			}
 			.prose :global(.visual-item:hover .visual-overlay) {
 				opacity: 1;
+			}
+			.prose :global(.modal) {
+				position: fixed;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				background: rgba(0, 0, 0, 0.9);
+				display: none;
+				justify-content: center;
+				align-items: center;
+				z-index: 1000;
+				padding: 2rem;
+				box-sizing: border-box;
+			}
+			.prose :global(.modal.active) {
+				display: flex;
+			}
+			.prose :global(.modal-content) {
+				max-width: 90%;
+				max-height: 90vh;
+				display: flex;
+				flex-direction: column;
+				background: white;
+				border-radius: 8px;
+				overflow: hidden;
+			}
+			.prose :global(.modal-image) {
+				width: 100%;
+				height: auto;
+				max-height: 70vh;
+				object-fit: contain;
+			}
+			.prose :global(.modal-description) {
+				padding: 1.5rem;
+				background: white;
+				color: #111;
+				font-size: 16px;
+				line-height: 1.6;
+			}
+			.prose :global(.modal-close) {
+				position: absolute;
+				top: 1rem;
+				right: 1rem;
+				color: white;
+				font-size: 2rem;
+				cursor: pointer;
+				background: none;
+				border: none;
+				padding: 0.5rem;
 			}
 		</style>
 	</head>
@@ -212,5 +260,56 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 		});
 
 		learningsSection.innerHTML = content;
+	});
+
+	document.addEventListener('DOMContentLoaded', () => {
+		const visualItems = document.querySelectorAll('.visual-item');
+		let modal = document.querySelector('.modal');
+		
+		// Create modal if it doesn't exist
+		if (!modal) {
+			modal = document.createElement('div');
+			modal.className = 'modal';
+			modal.innerHTML = `
+				<button class="modal-close">&times;</button>
+				<div class="modal-content">
+					<img class="modal-image" src="" alt="">
+					<div class="modal-description"></div>
+				</div>
+			`;
+			document.body.appendChild(modal);
+		}
+
+		const modalImage = modal.querySelector('.modal-image');
+		const modalDescription = modal.querySelector('.modal-description');
+		const closeButton = modal.querySelector('.modal-close');
+
+		visualItems.forEach(item => {
+			item.addEventListener('click', () => {
+				const img = item.querySelector('img');
+				const description = item.getAttribute('data-description');
+				
+				modalImage.src = img.src;
+				modalDescription.textContent = description;
+				modal.classList.add('active');
+				document.body.style.overflow = 'hidden';
+			});
+		});
+
+		// Close modal when clicking close button or outside
+		modal.addEventListener('click', (e) => {
+			if (e.target === modal || e.target === closeButton) {
+				modal.classList.remove('active');
+				document.body.style.overflow = '';
+			}
+		});
+
+		// Close modal with escape key
+		document.addEventListener('keydown', (e) => {
+			if (e.key === 'Escape' && modal.classList.contains('active')) {
+				modal.classList.remove('active');
+				document.body.style.overflow = '';
+			}
+		});
 	});
 </script>
