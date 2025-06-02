@@ -79,11 +79,15 @@ const posts = await getCollection('product');
 				display: flex;
 				justify-content: center;
 				margin-bottom: 0.75rem;
+				position: relative;
+				aspect-ratio: 2/1;
+				overflow: hidden;
+				border-radius: 12px;
+				border: 1px solid #787878;
 			}
 			ul li img {
-				border-radius: 12px;
 				width: 100%;
-				height: auto;
+				height: 100%;
 				object-fit: cover;
 			}
 			ul li:first-child .img-container {
