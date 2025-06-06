@@ -2,6 +2,7 @@
 import BaseHead from '../../components/BaseHead.astro';
 import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
+import GifPlayer from '../../components/GifPlayer.astro';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../../consts';
 ---
 
@@ -42,8 +43,8 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../../consts';
 							<li>Insomnia Sales Letter</li>
 							<li>Private Chef</li>
 							<li>Exequisuite</li>
-						<!--</ul>
-						<div class="gif-container">
+						</ul>
+						<!--<div class="gif-container">
 							<img src="/Chef_DSL.gif" alt="Chef DSL Demo" />
 						</div>-->
 					</div>
@@ -121,6 +122,8 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../../consts';
 			.project .gif-container {
 				margin-top: 1em;
 				width: 100%;
+				display: flex;
+				justify-content: center;
 			}
 			.project .gif-container img {
 				width: 100%;

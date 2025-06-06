@@ -26,6 +26,15 @@ We strategically stripped the tool of low-usage features and rebuilt core functi
 ## Visuals
 
 <div class="centered-image">
-  <img src="/trips.png" alt="Trips Admin Interface" style="width: 50%; height: auto; box-shadow: var(--box-shadow);" />
+  <div style="display: flex; gap: 2rem; justify-content: center; margin: 0 auto;">
+    <div style="display: flex; flex-direction: column; align-items: center; width: 45%;">
+      <img src="/old_trips.png" alt="Trips Admin Interface" style="width: 100%; height: auto; box-shadow: var(--box-shadow);" />
+      <p style="margin-top: 1rem; color: var(--text-gray);">Original ColdFusion Interface</p>
+    </div>
+    <div style="display: flex; flex-direction: column; align-items: center; width: 45%;">
+      <img src="/trips.png" alt="Trips Admin Interface" style="width: 100%; height: auto; box-shadow: var(--box-shadow);" />
+      <p style="margin-top: 1rem; color: var(--text-gray);">Pared-down Tool</p>
+    </div>
+  </div>
 </div>
 

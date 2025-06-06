@@ -1,0 +1,30 @@
+---
+interface Props {
+  src: string;
+  alt: string;
+}
+
+const { src, alt } = Astro.props;
+---
+
+<div class="gif-container">
+  <img 
+    src={src}
+    alt={alt}
+    class="gif-image"
+  />
+</div>
+
+<style>
+  .gif-container {
+    width: 100%;
+    border-radius: 4px;
+    overflow: hidden;
+  }
+
+  .gif-image {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+  }
+</style> 

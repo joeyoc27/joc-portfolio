@@ -47,7 +47,7 @@ Click each to learn more.
     <img src="/CLbrand.png" alt="Branding Overhauls" />
     <div class="visual-overlay">Branding Overhauls</div>
   </div>
-  <div class="visual-item" data-description="How it Works: An interactive overview component that guides users through the Vrbo listing process, providing a step-by-step visual walkthrough of what hosting on the platform entails.">
+  <div class="visual-item" data-description="**How it Works:** An interactive overview component that guides users through the Vrbo listing process, providing a step-by-step visual walkthrough of what hosting on the platform entails.">
     <img src="/hiw.png" alt="How it Works" />
     <div class="visual-overlay">How it Works</div>
   </div>
