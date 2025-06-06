@@ -2,7 +2,7 @@
 title: 'Vrbo Host Incentive Program'
 description: 'Converting travelers to hosts with OneKeyCash'
 pubDate: 'Summer 2025'
-heroImage: '/blog-placeholder-2.jpg'
+heroImage: '/okc.png'
 ---
 
 ## The Challenge

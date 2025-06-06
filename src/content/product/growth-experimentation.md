@@ -2,14 +2,14 @@
 title: 'Onboarding Sign-up: Growth Experimentation'
 description: 'A/B tests to optimize the top of the onboarding funnel'
 pubDate: '2023 - 2025'
-heroImage: '/blog-placeholder-2.jpg'
+heroImage: '/growth.png'
 ---
 
 ## The Challenge
 The sign-up pages (List Your Property) drive EG's property acquisition pipeline. With stable core onboarding performance, conversion improvements at these funnel entry points translate directly to measurable business growth.
 
 ## Key Insights
-Upon joining, I identified fundamental gaps: bland copy/branding and missing core conversion elements like FAQs, video testimonials, and clear CTAs. Implementing these foundational improvements became the priority before advancing to complex experiments.
+Upon joining EG, I identified fundamental gaps: bland copy/branding and missing core conversion elements like FAQs, video testimonials, and clear CTAs. Implementing these foundational improvements became the priority before advancing to complex experiments.
 
 Following this baseline work, I collaborated with sales and support teams to identify and resolve key customer pain points, accelerating time-to-go-live. 
 

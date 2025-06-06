@@ -19,16 +19,24 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 				padding-top: var(--header-height);
 			}
 			main {
-				width: calc(100% - 2em);
+				width: 100%;
 				max-width: 100%;
 				margin: 0;
 				padding: 0;
+				overflow-x: hidden;
+			}
+			.container {
+				max-width: 750px;
+				margin: 0 auto;
+				padding: 0 1.5em;
+				width: 100%;
+				box-sizing: border-box;
 			}
 			.hero-image {
 				width: 100%;
 				max-width: 720px;
 				margin: 2em auto 0;
-				padding: 0 1em;
+				padding: 0 1.5em;
 				box-sizing: border-box;
 			}
 			.hero-image img {
@@ -42,28 +50,36 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 				object-fit: cover;
 			}
 			.prose {
-				width: 720px;
-				max-width: calc(100% - 2em);
+				width: 100%;
+				max-width: 720px;
 				margin: auto;
-				padding: 2em 1em;
+				padding: 2em 1.5em;
 				color: #595959;
 				font-size: 14.6667px;
 				line-height: 1.6;
+				box-sizing: border-box;
+				word-wrap: break-word;
+				overflow-wrap: break-word;
 			}
 			.title {
 				margin-bottom: 1em;
 				padding: 1em 0;
 				text-align: center;
 				line-height: 1;
+				max-width: 100%;
 			}
 			.title h1 {
 				margin: 0 0 0.5em 0;
 				color: #111;
 				font-weight: 500;
 				font-size: 2em;
+				max-width: 100%;
+				word-wrap: break-word;
 			}
 			.description {
 				color: #595959;
+				max-width: 100%;
+				word-wrap: break-word;
 			}
 			.prose :global(h2) {
 				color: #111;
@@ -71,6 +87,7 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 				font-weight: 500;
 				margin: 2em 0 0.75em;
 				line-height: 1.2;
+				max-width: 100%;
 			}
 			p, ul {
 				margin-bottom: 1.5em;
@@ -87,19 +104,19 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 				font-style: italic;
 			}
 			@media (max-width: 720px) {
+				main {
+					width: 100%;
+					margin: 0;
+					padding: 0;
+					overflow-x: hidden;
+				}
 				.hero-image {
-					margin-top: 1em;
+					margin: 1em auto 0;
+					padding: 0 1.5em;
 				}
 				.prose {
-					padding-top: 1.5em;
+					padding: 1.5em 1.5em;
 				}
-			}
-			.container {
-				max-width: 750px;
-				margin: 0 auto;
-				padding: 0 1.5em;
-				width: 100%;
-				box-sizing: border-box;
 			}
 			.prose :global(.hover-orange) {
 				transition: color 0.2s ease;
